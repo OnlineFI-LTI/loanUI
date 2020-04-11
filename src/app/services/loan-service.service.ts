@@ -21,7 +21,7 @@ export class LoanServiceService {
     return this.http.get(`http://localhost:8011/locations-ws/locations/locationSummary/${username}`);
   }
 
-  getApplicationSummary() {
-    return this.http.get<AppData[]>('http://127.0.0.1:5000/loanApplication');
+  getApplicationSummary(username) {
+    return this.http.get<AppData[]>(`http://127.0.0.1:5000/loanApplication/${username}`);
   }
 }

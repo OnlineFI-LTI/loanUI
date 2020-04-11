@@ -13,7 +13,7 @@ export class ApplicationSummaryComponent implements OnInit {
   constructor(private loanService: LoanServiceService) { }
 
   ngOnInit(): void {
-    this.loanService.getApplicationSummary().subscribe(data => {
+    this.loanService.getApplicationSummary('1').subscribe(data => {
       this.appData = data;
     });
   }

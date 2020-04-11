@@ -1,12 +1,11 @@
 export class AppData {
-  applicationNo: string ;
-  name: string;
-  effectiveLoanAmount: string;
+  loan_application_no: string ;
+  account_holder_name: string;
+  effective_loan_amount: string;
 
-  constructor( applicationNo: string , name: string, effectiveLoanAmount: string) {
-    this.applicationNo = applicationNo;
-    this.name = name;
-    this.effectiveLoanAmount = effectiveLoanAmount;
-
+  constructor( loan_application_no: string , account_holder_name: string, effective_loan_amount: string) {
+    this.loan_application_no = loan_application_no;
+    this.account_holder_name = account_holder_name;
+    this.effective_loan_amount = effective_loan_amount;
   }
 }
