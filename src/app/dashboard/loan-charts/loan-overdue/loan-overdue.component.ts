@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Chart } from 'chart.js';
-import {LoanServiceService} from "../../../services/loan-service.service";
+import {LoanServiceService} from '../../../services/loan-service.service';
 
 @Component({
   selector: 'app-loan-overdue',
@@ -11,7 +11,7 @@ import {LoanServiceService} from "../../../services/loan-service.service";
 export class LoanOverdueComponent implements OnInit {
   item = [];
   quantity = [];
-  overduesChart = [];
+  overdueChart = [];
 
   constructor(private httpClient: HttpClient, private loanService: LoanServiceService) { }
 
@@ -24,7 +24,7 @@ export class LoanOverdueComponent implements OnInit {
         this.quantity.push(obj1);
       });
 
-      this.overduesChart = new Chart('canvas', {
+      this.overdueChart = new Chart('overdueCanvas', {
         type: 'bar',
         data: {
           labels: this.item,

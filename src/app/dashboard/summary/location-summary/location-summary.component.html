@@ -1,15 +1,13 @@
 <div class="card">
-  <div class="card-header header-background">Loan Summary</div>
+  <div class="card-header header-background">Location Summary</div>
   <div class="card-body" style="padding: 0px;">
     <ul class="list-group">
       <li class="list-group-item"
-          *ngFor="let loan of postsArray;let i=index;"
-          [ngStyle]="{ backgroundColor: i % 2 == 0 ? 'transparent' : '#eeeeee'}"
+          *ngFor="let loan of postsArray;let i = index;"
+          [ngStyle]="{backgroundColor : i % 2 == 0 ? 'rgba(0,0,0,.05)' : 'transparent'}"
       >
         <span>{{loan.k}}</span><span> : </span><span>{{loan.m}}</span>
       </li>
     </ul>
   </div>
 </div>
-
-

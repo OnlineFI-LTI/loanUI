@@ -23,7 +23,7 @@ export class LoanOutstandingComponent implements OnInit {
         this.quantity.push(obj1);
       });
 
-      this.outStandingChart = new Chart('canvas2', {
+      this.outStandingChart = new Chart('outStandingCanvas', {
         type: 'bar',
         data: {
           labels: this.item,
@@ -53,8 +53,5 @@ export class LoanOutstandingComponent implements OnInit {
         }
       });
     });
-
-
   }
-
 }
