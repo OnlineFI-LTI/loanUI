@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-header header-background">Loan Summary</div>
+  <div class="card-body" style="padding: 0px;">
+    <!--<ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let loan of loanSummary"
+      >
+        <span>{{loan.name}}</span><span> : </span><span>{{loan.numAmount}}</span>
+      </li>
+    </ul>-->
+    <span style="font-size: 16px;font-family: Arial;">Loan Application List</span>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Application No.</th>
+        <th>Name</th>
+        <th>Effective Loan Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let todo of appData">
+        <td>{{todo.account_holder_name}}</td>
+        <td>{{todo.effective_loan_amount}}</td>
+        <td>{{todo.loan_application_no}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
