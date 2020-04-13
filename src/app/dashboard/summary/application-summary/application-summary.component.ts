@@ -13,7 +13,7 @@ export class ApplicationSummaryComponent implements OnInit {
 
   constructor(private loanService: LoanServiceService) { }
 
-  private formattedAmount(amt: any){
+  formattedAmount(amt: any){
     return  Big(amt).toFixed(2);
   }
 
