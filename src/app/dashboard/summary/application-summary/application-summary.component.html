@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <table class="table table-striped">
+        <table class="table">
           <thead>
           <tr style="background-color: #cccccc;">
             <th class="w-auto">Application No.</th>
@@ -17,7 +17,9 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let todo of appData">
+          <tr *ngFor="let todo of appData;let i = index;"
+              [ngStyle]="{backgroundColor : i % 2 == 0 ? 'rgba(0,0,0,.02)' : 'transparent'}"
+          >
             <td>{{todo.loan_application_no}}</td>
             <td>{{todo.account_holder_name}}</td>
             <td>{{todo.effective_loan_amount}}</td>

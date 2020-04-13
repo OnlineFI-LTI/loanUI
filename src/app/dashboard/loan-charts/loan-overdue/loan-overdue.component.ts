@@ -45,10 +45,18 @@ export class LoanOverdueComponent implements OnInit {
           },
           scales: {
             xAxes: [{
-              display: true
+              display: true,
+              ticks: {
+                fontColor: '#000',
+                fontSize: 13,
+              }
             }],
             yAxes: [{
-              display: true
+              display: true,
+              ticks: {
+                fontColor: '#000',
+                fontSize: 13,
+              }
             }],
           }
         }
