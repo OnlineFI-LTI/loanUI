@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AppData} from '../../../appData';
 import {LoanServiceService} from '../../../services/loan-service.service';
+import Big from 'big.js';
 
 @Component({
   selector: 'app-application-summary',
@@ -11,6 +12,10 @@ export class ApplicationSummaryComponent implements OnInit {
   appData: AppData[] = [];
 
   constructor(private loanService: LoanServiceService) { }
+
+  private formattedAmount(amt: any){
+    return  Big(amt).toFixed(2);
+  }
 
   ngOnInit(): void {
     this.loanService.getApplicationSummary('1').subscribe(data => {
